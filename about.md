@@ -11,11 +11,11 @@ Autocrash nació en un Spectrum +2A. Un juego de choques de coches donde el obje
 
 El juego llegó a publicarse a través de Zigurat, formando parte de esa generación de desarrolladores españoles que creábamos desde nuestras habitaciones, sin Internet, sin Stack Overflow, con manuales fotocopiados y mucha obsesión.
 
-## 35 años después
+## 36 años después
 
 Mucho ha pasado desde entonces. Arcade 3D con hardware propio compitiendo con SEGA y Namco. Desarrollo móvil en la era J2ME. Realidad virtual con CoolPaintr VR llegando al top 5 de PlayStation Store en Estados Unidos. 40 años programando sin parar.
 
-Y ahora, en 2025, llega el momento de cerrar el círculo.
+Y ahora, en 2026, llega el momento de cerrar el círculo.
 
 ## El remake
 
