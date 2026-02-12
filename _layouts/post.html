@@ -26,6 +26,27 @@ layout: default
       {{ content }}
     </div>
 
+    {% if site.giscus.enabled and site.giscus.repo %}
+    <section class="comments-section">
+      <h2 class="comments-title">Comentarios</h2>
+      <div id="comments">
+        <script src="https://giscus.app/client.js"
+          data-repo="{{ site.giscus.repo }}"
+          data-repo-id="{{ site.giscus.repo_id }}"
+          data-category="{{ site.giscus.category }}"
+          data-category-id="{{ site.giscus.category_id }}"
+          data-mapping="{{ site.giscus.mapping }}"
+          data-reactions-enabled="{{ site.giscus.reactions_enabled }}"
+          data-emit-metadata="0"
+          data-input-position="bottom"
+          data-theme="{{ site.giscus.theme }}"
+          crossorigin="anonymous"
+          async>
+        </script>
+      </div>
+    </section>
+    {% endif %}
+
     <footer class="post-footer">
       <div class="post-nav">
         {% if page.previous.url %}
@@ -43,6 +64,6 @@ layout: default
       </div>
     </footer>
 
-    {% comment %} Giscus already rendered above when `site.giscus.enabled` is true. The older placeholder block removed. {% endcomment %}
+    
   </div>
 </article>
