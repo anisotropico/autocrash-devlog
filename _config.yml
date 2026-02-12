@@ -1,0 +1,42 @@
+# Autocrash Devlog - Configuración Jekyll
+title: "Autocrash Devlog"
+description: "El remake de un juego de ZX Spectrum de 1990. 35 años después, cerrando el círculo."
+author: "Luis Angel Alda"
+url: "" # Tu URL de GitHub Pages: https://tuusuario.github.io
+baseurl: "/autocrash-devlog" # Nombre del repositorio
+
+# Configuración del blog
+permalink: /:year/:month/:day/:title/
+paginate: 10
+paginate_path: "/pagina/:num/"
+
+# Tema y plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-seo-tag
+
+# Redes sociales (ajusta según necesites)
+social:
+  github: # tu usuario de GitHub
+  twitter: # tu usuario de Twitter/X si tienes
+
+# Comentarios con Giscus (configurar después de crear el repo)
+giscus:
+  enabled: true
+  repo: "" # tuusuario/autocrash-devlog
+  repo_id: "" # Se obtiene de giscus.app
+  category: "Comentarios"
+  category_id: "" # Se obtiene de giscus.app
+  mapping: "pathname"
+  reactions_enabled: "1"
+  theme: "dark"
+
+# Idioma
+lang: es
+
+# Excluir del build
+exclude:
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock

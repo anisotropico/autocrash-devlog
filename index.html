@@ -1,0 +1,81 @@
+---
+layout: default
+title: Inicio
+---
+
+<section class="home-hero">
+  <div class="container">
+    <h1 class="hero-title">AUTOCRASH</h1>
+    <p class="hero-subtitle">
+      El remake de un juego de <strong>ZX Spectrum</strong> de 1990. 
+      35 años después, cerrando el círculo.
+    </p>
+    
+    <!-- Decoración pixelada animada -->
+    <div class="pixel-decoration">
+      <div class="pixel"></div>
+      <div class="pixel"></div>
+      <div class="pixel"></div>
+      <div class="pixel"></div>
+      <div class="pixel"></div>
+      <div class="pixel"></div>
+    </div>
+    
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <span class="hero-meta-value">1990</span>
+        <span class="hero-meta-label">Original</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="hero-meta-value">2025</span>
+        <span class="hero-meta-label">Remake</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="hero-meta-value">35</span>
+        <span class="hero-meta-label">Años</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Barra separadora Spectrum -->
+<div class="spectrum-bars-thin"></div>
+
+<section class="posts-section">
+  <div class="container">
+    <header class="section-header">
+      <h2 class="section-title">// DEVLOG</h2>
+    </header>
+    
+    <div class="posts-list">
+      {% for post in site.posts limit:10 %}
+      <a href="{{ post.url | relative_url }}" class="post-card">
+        <span class="post-card-date">{{ post.date | date: "%d.%m.%Y" }}</span>
+        <h3 class="post-card-title">{{ post.title }}</h3>
+        {% if post.excerpt %}
+        <p class="post-card-excerpt">{{ post.excerpt | strip_html | truncate: 200 }}</p>
+        {% endif %}
+        {% if post.tags %}
+        <div class="post-card-tags">
+          {% for tag in post.tags %}
+          <span class="tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </a>
+      {% endfor %}
+    </div>
+    
+    {% if site.posts.size == 0 %}
+    <div class="post-card">
+      <span class="post-card-date">PRÓXIMAMENTE</span>
+      <h3 class="post-card-title">El viaje comienza pronto...</h3>
+      <p class="post-card-excerpt">
+        El desarrollo de Autocrash arranca el 1 de febrero de 2026. 
+        Aquí documentaré cada paso del proceso.
+      </p>
+    </div>
+    {% endif %}
+  </div>
+</section>

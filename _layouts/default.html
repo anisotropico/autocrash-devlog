@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'es' }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  
+  {% seo %}
+</head>
+<body>
+  <div class="scanlines"></div>
+  
+  <!-- Bandas de color ZX Spectrum -->
+  <div class="spectrum-bars"></div>
+  
+  <header class="site-header">
+    <div class="container">
+      <a href="{{ '/' | relative_url }}" class="logo">
+        <span class="logo-text">AUTOCRASH</span>
+        <span class="logo-sub">DEVLOG</span>
+      </a>
+      <nav class="main-nav">
+        <a href="{{ '/' | relative_url }}">Inicio</a>
+        <a href="{{ '/arqueologia/' | relative_url }}">Arqueología</a>
+        <a href="{{ '/tecnologia/' | relative_url }}">Tecnología</a>
+        <a href="{{ '/about/' | relative_url }}">Sobre el proyecto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-content">
+    {{ content }}
+  </main>
+
+  <!-- Barra de color antes del footer -->
+  <div class="spectrum-bars-thin"></div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <p class="footer-tagline">De <strong>ZX Spectrum</strong> a <em>2025</em>.<br>35 años después, cerrando el círculo.</p>
+          <div class="loading-bar">
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+        <div class="footer-col">
+          <p class="footer-copy">© {{ 'now' | date: "%Y" }} Luis Angel Alda</p>
+          <p class="footer-tech">> READY_</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  {% if site.giscus.enabled and page.comments != false %}
+  <script src="https://giscus.app/client.js"
+    data-repo="{{ site.giscus.repo }}"
+    data-repo-id="{{ site.giscus.repo_id }}"
+    data-category="{{ site.giscus.category }}"
+    data-category-id="{{ site.giscus.category_id }}"
+    data-mapping="{{ site.giscus.mapping }}"
+    data-reactions-enabled="{{ site.giscus.reactions_enabled }}"
+    data-theme="{{ site.giscus.theme }}"
+    crossorigin="anonymous"
+    async>
+  </script>
+  {% endif %}
+</body>
+</html>

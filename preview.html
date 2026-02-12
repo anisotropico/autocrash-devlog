@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Autocrash Devlog - Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+:root{--spectrum-blue-bright:#002BFB;--spectrum-red-bright:#FF331C;--spectrum-magenta-bright:#FF40FF;--spectrum-green-bright:#00F92F;--spectrum-cyan-bright:#00FBFE;--spectrum-yellow-bright:#FFFC36;--spectrum-white:#CACACA;--spectrum-black:#000;--bg-primary:#0a0a0f;--bg-card:#1a1a24;--text-primary:#e0e0e0;--text-secondary:#888899;--accent:var(--spectrum-cyan-bright);--accent-glow:rgba(0,251,254,0.5);--accent-alt:var(--spectrum-magenta-bright);--accent-alt-glow:rgba(255,64,255,0.5);--font-display:'VT323',monospace;--font-body:'Space Mono',monospace;--space-xs:0.5rem;--space-sm:1rem;--space-md:2rem;--space-lg:4rem;--space-xl:6rem;--container-width:900px}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:18px}
+body{font-family:var(--font-body);background:var(--bg-primary);color:var(--text-primary);line-height:1.7;min-height:100vh;overflow-x:hidden}
+.scanlines{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9999;background:repeating-linear-gradient(0deg,rgba(0,0,0,0.1) 0px,rgba(0,0,0,0.1) 1px,transparent 1px,transparent 2px);opacity:0.3}
+.spectrum-bars{height:8px;background:linear-gradient(90deg,var(--spectrum-black) 0%,var(--spectrum-black) 12.5%,var(--spectrum-blue-bright) 12.5%,var(--spectrum-blue-bright) 25%,var(--spectrum-red-bright) 25%,var(--spectrum-red-bright) 37.5%,var(--spectrum-magenta-bright) 37.5%,var(--spectrum-magenta-bright) 50%,var(--spectrum-green-bright) 50%,var(--spectrum-green-bright) 62.5%,var(--spectrum-cyan-bright) 62.5%,var(--spectrum-cyan-bright) 75%,var(--spectrum-yellow-bright) 75%,var(--spectrum-yellow-bright) 87.5%,var(--spectrum-white) 87.5%,var(--spectrum-white) 100%);box-shadow:0 2px 20px rgba(0,251,254,0.3)}
+.spectrum-bars-thin{height:3px;background:linear-gradient(90deg,var(--spectrum-blue-bright),var(--spectrum-red-bright),var(--spectrum-magenta-bright),var(--spectrum-green-bright),var(--spectrum-cyan-bright),var(--spectrum-yellow-bright),var(--spectrum-white))}
+.container{max-width:var(--container-width);margin:0 auto;padding:0 var(--space-md)}
+.site-header{padding:var(--space-md) 0;background:linear-gradient(180deg,rgba(0,251,254,0.08) 0%,transparent 100%)}
+.site-header .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:var(--space-sm)}
+.logo{text-decoration:none;display:flex;flex-direction:column}
+.logo-text{font-family:var(--font-display);font-size:2.5rem;color:var(--accent);text-shadow:0 0 10px var(--accent-glow),0 0 20px var(--accent-glow),3px 3px 0 var(--spectrum-magenta-bright);letter-spacing:0.1em;line-height:1}
+.logo-sub{font-family:var(--font-body);font-size:0.7rem;color:var(--spectrum-yellow-bright);letter-spacing:0.3em;text-transform:uppercase}
+.main-nav{display:flex;gap:var(--space-md)}
+.main-nav a{font-size:0.8rem;color:var(--text-secondary);text-decoration:none;text-transform:uppercase;letter-spacing:0.05em;transition:all 0.3s;position:relative;padding:0.3em 0}
+.main-nav a:hover{color:var(--spectrum-yellow-bright);text-shadow:0 0 10px rgba(255,252,54,0.6)}
+.main-nav a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:linear-gradient(90deg,var(--spectrum-cyan-bright),var(--spectrum-magenta-bright));transition:width 0.3s}
+.main-nav a:hover::after{width:100%}
+.home-hero{padding:var(--space-xl) 0 var(--space-lg);text-align:center;position:relative;overflow:hidden}
+.home-hero::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:800px;height:800px;background:radial-gradient(circle at 30% 30%,var(--accent-glow) 0%,transparent 40%),radial-gradient(circle at 70% 70%,var(--accent-alt-glow) 0%,transparent 40%);opacity:0.2;pointer-events:none;animation:pulse-bg 8s ease-in-out infinite}
+@keyframes pulse-bg{0%,100%{transform:translate(-50%,-50%) scale(1);opacity:0.2}50%{transform:translate(-50%,-50%) scale(1.1);opacity:0.25}}
+.hero-title{font-family:var(--font-display);font-size:6rem;color:var(--accent);text-shadow:0 0 20px var(--accent-glow),0 0 40px var(--accent-glow),0 0 80px var(--accent-glow),5px 5px 0 var(--spectrum-magenta-bright),-2px -2px 0 var(--spectrum-blue-bright);letter-spacing:0.15em;margin-bottom:var(--space-sm);animation:flicker 4s infinite,glow-pulse 2s ease-in-out infinite alternate}
+@keyframes flicker{0%,100%{opacity:1}92%{opacity:1}93%{opacity:0.8}94%{opacity:1}96%{opacity:0.9}97%{opacity:1}}
+@keyframes glow-pulse{from{filter:brightness(1)}to{filter:brightness(1.1)}}
+.hero-subtitle{font-size:1.2rem;color:var(--text-secondary);max-width:600px;margin:0 auto var(--space-md)}
+.hero-subtitle strong{color:var(--spectrum-yellow-bright)}
+.pixel-decoration{display:flex;justify-content:center;gap:4px;margin:var(--space-md) 0}
+.pixel{width:8px;height:8px;animation:pixel-blink 1.5s ease-in-out infinite}
+.pixel:nth-child(1){background:var(--spectrum-red-bright);animation-delay:0s}
+.pixel:nth-child(2){background:var(--spectrum-yellow-bright);animation-delay:0.1s}
+.pixel:nth-child(3){background:var(--spectrum-green-bright);animation-delay:0.2s}
+.pixel:nth-child(4){background:var(--spectrum-cyan-bright);animation-delay:0.3s}
+.pixel:nth-child(5){background:var(--spectrum-blue-bright);animation-delay:0.4s}
+.pixel:nth-child(6){background:var(--spectrum-magenta-bright);animation-delay:0.5s}
+@keyframes pixel-blink{0%,100%{opacity:0.4;transform:scale(1)}50%{opacity:1;transform:scale(1.2)}}
+.hero-meta{display:flex;justify-content:center;gap:var(--space-lg);margin-top:var(--space-md)}
+.hero-meta-item{display:flex;flex-direction:column;align-items:center;padding:var(--space-sm);background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.05);min-width:100px;position:relative;overflow:hidden}
+.hero-meta-item::before{content:'';position:absolute;top:0;left:0;right:0;height:2px}
+.hero-meta-item:nth-child(1)::before{background:var(--spectrum-blue-bright)}
+.hero-meta-item:nth-child(2)::before{background:var(--spectrum-magenta-bright)}
+.hero-meta-item:nth-child(3)::before{background:var(--spectrum-green-bright)}
+.hero-meta-value{font-family:var(--font-display);font-size:2.5rem;line-height:1}
+.hero-meta-item:nth-child(1) .hero-meta-value{color:var(--spectrum-blue-bright)}
+.hero-meta-item:nth-child(2) .hero-meta-value{color:var(--spectrum-magenta-bright)}
+.hero-meta-item:nth-child(3) .hero-meta-value{color:var(--spectrum-green-bright)}
+.hero-meta-label{text-transform:uppercase;letter-spacing:0.1em;font-size:0.7rem;margin-top:var(--space-xs);color:var(--text-secondary)}
+.posts-section{padding:var(--space-lg) 0}
+.section-header{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:var(--space-md);padding-bottom:var(--space-sm);border-bottom:2px solid;border-image:linear-gradient(90deg,var(--spectrum-cyan-bright),var(--spectrum-magenta-bright),transparent) 1}
+.section-title{font-family:var(--font-display);font-size:1.8rem;color:var(--text-primary);letter-spacing:0.05em}
+.section-title::before{content:'>';color:var(--spectrum-green-bright);margin-right:0.5em;animation:cursor-blink 1s step-end infinite}
+@keyframes cursor-blink{0%,100%{opacity:1}50%{opacity:0}}
+.posts-list{display:flex;flex-direction:column;gap:var(--space-md)}
+.post-card{background:var(--bg-card);border:1px solid rgba(255,255,255,0.05);padding:var(--space-md);text-decoration:none;transition:all 0.3s;position:relative;overflow:hidden;cursor:pointer}
+.post-card::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:linear-gradient(180deg,var(--spectrum-cyan-bright),var(--spectrum-magenta-bright));transform:scaleY(0);transition:transform 0.3s;transform-origin:top}
+.post-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--spectrum-red-bright),var(--spectrum-yellow-bright),var(--spectrum-green-bright),var(--spectrum-cyan-bright),var(--spectrum-blue-bright),var(--spectrum-magenta-bright));opacity:0;transition:opacity 0.3s}
+.post-card:hover{border-color:rgba(0,251,254,0.3);transform:translateX(8px);background:linear-gradient(90deg,rgba(0,251,254,0.05) 0%,var(--bg-card) 100%)}
+.post-card:hover::before{transform:scaleY(1)}
+.post-card:hover::after{opacity:1}
+.post-card-date{font-family:var(--font-display);font-size:1.1rem;color:var(--spectrum-green-bright);margin-bottom:var(--space-xs);display:inline-block}
+.post-card-date::before{content:'[';color:var(--text-secondary)}
+.post-card-date::after{content:']';color:var(--text-secondary)}
+.post-card-title{font-size:1.4rem;color:var(--text-primary);margin-bottom:var(--space-xs);line-height:1.3;transition:color 0.3s}
+.post-card:hover .post-card-title{color:var(--spectrum-cyan-bright)}
+.post-card-excerpt{font-size:0.9rem;color:var(--text-secondary);line-height:1.6}
+.post-card-tags{display:flex;gap:var(--space-xs);margin-top:var(--space-sm);flex-wrap:wrap}
+.tag{font-size:0.7rem;padding:0.3em 0.8em;background:transparent;text-transform:uppercase;letter-spacing:0.05em;border:1px solid;transition:all 0.3s}
+.tag:nth-child(6n+1){color:var(--spectrum-cyan-bright);border-color:var(--spectrum-cyan-bright)}
+.tag:nth-child(6n+2){color:var(--spectrum-magenta-bright);border-color:var(--spectrum-magenta-bright)}
+.tag:nth-child(6n+3){color:var(--spectrum-yellow-bright);border-color:var(--spectrum-yellow-bright)}
+.tag:nth-child(6n+4){color:var(--spectrum-green-bright);border-color:var(--spectrum-green-bright)}
+.tag:nth-child(6n+5){color:var(--spectrum-red-bright);border-color:var(--spectrum-red-bright)}
+.tag:nth-child(6n+6){color:var(--spectrum-blue-bright);border-color:var(--spectrum-blue-bright)}
+.tag:hover{background:currentColor;color:var(--bg-primary)}
+.site-footer{padding:var(--space-lg) 0 var(--space-md);margin-top:var(--space-xl);background:linear-gradient(0deg,rgba(0,251,254,0.05) 0%,transparent 100%)}
+.footer-grid{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:var(--space-md)}
+.footer-tagline{font-family:var(--font-display);font-size:1.3rem;color:var(--text-secondary);line-height:1.4}
+.footer-tagline strong{color:var(--spectrum-cyan-bright)}
+.footer-tagline em{color:var(--spectrum-magenta-bright);font-style:normal}
+.footer-copy{font-size:0.8rem;color:var(--text-secondary)}
+.footer-tech{font-size:0.7rem;color:var(--spectrum-green-bright);margin-top:var(--space-xs);opacity:0.7}
+.loading-bar{display:flex;gap:2px;margin-top:var(--space-sm)}
+.loading-bar span{width:12px;height:6px;animation:loading-pulse 1.5s ease-in-out infinite}
+.loading-bar span:nth-child(1){background:var(--spectrum-red-bright);animation-delay:0s}
+.loading-bar span:nth-child(2){background:var(--spectrum-yellow-bright);animation-delay:0.1s}
+.loading-bar span:nth-child(3){background:var(--spectrum-green-bright);animation-delay:0.2s}
+.loading-bar span:nth-child(4){background:var(--spectrum-cyan-bright);animation-delay:0.3s}
+.loading-bar span:nth-child(5){background:var(--spectrum-blue-bright);animation-delay:0.4s}
+.loading-bar span:nth-child(6){background:var(--spectrum-magenta-bright);animation-delay:0.5s}
+.loading-bar span:nth-child(7){background:var(--spectrum-white);animation-delay:0.6s}
+@keyframes loading-pulse{0%,100%{opacity:0.3}50%{opacity:1}}
+@media(max-width:768px){html{font-size:16px}.site-header .container{flex-direction:column;text-align:center}.main-nav{flex-wrap:wrap;justify-content:center}.hero-title{font-size:3.5rem}.hero-meta{flex-direction:column;gap:var(--space-sm)}.footer-grid{flex-direction:column;text-align:center}}
+  </style>
+</head>
+<body>
+  <div class="scanlines"></div>
+  <div class="spectrum-bars"></div>
+  <header class="site-header">
+    <div class="container">
+      <a href="#" class="logo">
+        <span class="logo-text">AUTOCRASH</span>
+        <span class="logo-sub">DEVLOG</span>
+      </a>
+      <nav class="main-nav">
+        <a href="#">Inicio</a>
+        <a href="#">Arqueología</a>
+        <a href="#">Tecnología</a>
+        <a href="#">Sobre el proyecto</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="home-hero">
+      <div class="container">
+        <h1 class="hero-title">AUTOCRASH</h1>
+        <p class="hero-subtitle">El remake de un juego de <strong>ZX Spectrum</strong> de 1990. 35 años después, cerrando el círculo.</p>
+        <div class="pixel-decoration">
+          <div class="pixel"></div><div class="pixel"></div><div class="pixel"></div>
+          <div class="pixel"></div><div class="pixel"></div><div class="pixel"></div>
+        </div>
+        <div class="hero-meta">
+          <div class="hero-meta-item"><span class="hero-meta-value">1990</span><span class="hero-meta-label">Original</span></div>
+          <div class="hero-meta-item"><span class="hero-meta-value">2025</span><span class="hero-meta-label">Remake</span></div>
+          <div class="hero-meta-item"><span class="hero-meta-value">35</span><span class="hero-meta-label">Años</span></div>
+        </div>
+      </div>
+    </section>
+    <div class="spectrum-bars-thin"></div>
+    <section class="posts-section">
+      <div class="container">
+        <header class="section-header"><h2 class="section-title">DEVLOG</h2></header>
+        <div class="posts-list">
+          <div class="post-card">
+            <span class="post-card-date">01.02.2026</span>
+            <h3 class="post-card-title">El comienzo de todo</h3>
+            <p class="post-card-excerpt">Por qué estoy haciendo esto y qué esperar de este devlog. Después de 40 años programando, llega el momento de volver a crear por crear.</p>
+            <div class="post-card-tags"><span class="tag">meta</span><span class="tag">inicio</span></div>
+          </div>
+          <div class="post-card">
+            <span class="post-card-date">08.02.2026</span>
+            <h3 class="post-card-title">Arquitectura del motor de voxels</h3>
+            <p class="post-card-excerpt">Primera inmersión técnica en el sistema de voxelización. Cómo representar coches destruibles con resolución suficiente sin explotar la memoria.</p>
+            <div class="post-card-tags"><span class="tag">engine</span><span class="tag">voxels</span><span class="tag">técnico</span></div>
+          </div>
+          <div class="post-card">
+            <span class="post-card-date">15.02.2026</span>
+            <h3 class="post-card-title">Punto fijo: cuando los flotantes no son opción</h3>
+            <p class="post-card-excerpt">Por qué la aritmética de punto fijo es esencial para multijugador determinista, y las trampas que hay que evitar.</p>
+            <div class="post-card-tags"><span class="tag">matemáticas</span><span class="tag">determinismo</span><span class="tag">netcode</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div class="spectrum-bars-thin"></div>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-tagline">De <strong>ZX Spectrum</strong> a <em>2025</em>.<br>35 años después, cerrando el círculo.</p>
+          <div class="loading-bar"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        </div>
+        <div>
+          <p class="footer-copy">© 2026 Luis Angel Alda</p>
+          <p class="footer-tech">> READY_</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
