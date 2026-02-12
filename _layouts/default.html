@@ -61,18 +61,6 @@
     </div>
   </footer>
 
-  {% if site.giscus.enabled and page.comments != false %}
-  <script src="https://giscus.app/client.js"
-    data-repo="{{ site.giscus.repo }}"
-    data-repo-id="{{ site.giscus.repo_id }}"
-    data-category="{{ site.giscus.category }}"
-    data-category-id="{{ site.giscus.category_id }}"
-    data-mapping="{{ site.giscus.mapping }}"
-    data-reactions-enabled="{{ site.giscus.reactions_enabled }}"
-    data-theme="{{ site.giscus.theme }}"
-    crossorigin="anonymous"
-    async>
-  </script>
-  {% endif %}
+  {% comment %} Giscus script is included in post layout where the comments container is rendered. {% endcomment %}
 </body>
 </html>
