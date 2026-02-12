@@ -23,10 +23,10 @@ social:
 # Comentarios con Giscus (configurar después de crear el repo)
 giscus:
   enabled: true
-  repo: "" # tuusuario/autocrash-devlog
-  repo_id: "" # Se obtiene de giscus.app
-  category: "Comentarios"
-  category_id: "" # Se obtiene de giscus.app
+  repo: "anisotropico/autocrash-devlog" # tuusuario/autocrash-devlog
+  repo_id: "R_kgDOROzzVA" # Se obtiene de giscus.app
+  category: "General"
+  category_id: "DIC_kwDOROzzVM4C2TQc" # Se obtiene de giscus.app
   mapping: "pathname"
   reactions_enabled: "1"
   theme: "dark"
