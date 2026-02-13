@@ -7,7 +7,7 @@ permalink: /arqueologia/
 
 ## ZX Spectrum
 
-![Autocrash](/assets/images/autocrash.jpg)
+![Autocrash](../assets/images/autocrash.jpg)
 
 El original se desarrolló para ZX Spectrum 48K. Eso significa:
 
@@ -38,7 +38,7 @@ Sin multitarea. Sin abstracciones. Sin capas.
 
 ## Representación gráfica
 
-![Graphics](/assets/images/Graphics.png)
+![Graphics](../assets/images/Graphics.png)
 
 El Spectrum no tenía sprites por hardware.  
 Todo se dibujaba manipulando directamente la memoria de vídeo.
@@ -74,7 +74,7 @@ Eran consecuencia directa de la memoria disponible.
 
 ## MicroDraw y el nacimiento de las herramientas
 
-![MicroCode](/assets/images/MicroCode.jpeg)
+![MicroCode](../assets/images/MicroCode.jpeg)
 
 Autocrash fue mi primer juego, pero no fue lo primero que programé.
 
@@ -86,7 +86,7 @@ En aquel momento no lo veía así, pero estaba aprendiendo algo fundamental: ant
 
 ## Y el código fuente
 
-![AutoCode](/assets/images/AutoCode.png)
+![AutoCode](../assets/images/AutoCode.png)
 
 Antes del ensamblador había papel.
 
