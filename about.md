@@ -7,32 +7,42 @@ permalink: /about/
 
 ## El origen: ZX Spectrum, 1990
 
-Autocrash nació en un Spectrum +2A. Un juego de choques de coches donde el objetivo era simple y visceral: destruir. Lo programé en ensamblador Z80, con gráficos pixel a pixel, en una época donde cada byte contaba.
+Autocrash nació en un Spectrum. Un juego de coches de choque donde el objetivo era simple: alcanzar velocidad máxima, embestir al coche enemigo, expulsar a su ocupante como consecuencia del impacto y finalmente atropellarlo. Lo programé en ensamblador Z80, en una época donde cada byte contaba.
 
-El juego llegó a publicarse a través de Zigurat, formando parte de esa generación de desarrolladores españoles que creábamos desde nuestras habitaciones, sin Internet, sin Stack Overflow, con manuales fotocopiados y mucha obsesión.
+El juego se publicó a través de Zigurat, formando parte de esa generación de desarrolladores españoles que creábamos desde nuestras habitaciones, sin Internet, sin Stack Overflow, sin motores, sin frameworks. Solo memoria limitada, paciencia y obsesión
 
 ## 36 años después
 
 Mucho ha pasado desde entonces. Arcade 3D con hardware propio compitiendo con SEGA y Namco. Desarrollo móvil en la era J2ME. Realidad virtual con CoolPaintr VR llegando al top 5 de PlayStation Store en Estados Unidos. 40 años programando sin parar.
 
-Y ahora, en 2026, llega el momento de cerrar el círculo.
+Y ahora, en 2026, me jubilo profesionalmente, pero no creativamente. Ahora tengo algo más valioso que cualquier hardware: tiempo. Tiempo para pensar, experimentar y jugar en el sentido más puro de la palabra.
 
 ## El remake
 
-Autocrash renace con tecnología propia:
+Este nuevo Autocrash no busca ser el mejor juego del mundo (aunque no estaría mal).  
+Busca algo más interesante: ser un laboratorio.
 
-- **Motor de voxels** desarrollado desde cero
-- **Arquitectura determinista** para multijugador sincronizado
-- **Aritmética de punto fijo** para reproducibilidad perfecta
-- **Destrucción física** a nivel de voxel
+Una arena donde probar tecnología actual bajo una estética retro.  
+Mantener el espíritu original en la superficie, pero que bajo el capó todo sea ingeniería contemporánea.
 
-No uso Unity. No uso Unreal. Construyo mis propias herramientas antes de crear contenido. Siempre ha sido así.
+No utilizaré ningún motor comercial.  
+Todo será propietario.  
+Herramientas construidas a medida, solo para este juego. Y si, siempre ha sido así, desde mis primeros pasos en la programación.
+
+Construir así obliga a pensar.  
+Obliga a justificar cada decisión.  
+Obliga a entender cada sistema.
 
 ## El devlog
 
-Este blog documenta el proceso completo: cada decisión técnica, cada problema resuelto, cada iteración del diseño. Es un registro público de cómo se hace un juego desde cero, con 40 años de experiencia detrás y sin prisas comerciales.
+Este blog documenta el proceso completo:  
+cada decisión técnica, cada problema, cada experimento fallido, cada iteración.
 
-El desarrollo comienza oficialmente el 1 de febrero de 2026. Aquí estaré, escribiendo cada paso del camino.
+No es marketing.  
+Es ingeniería en público.
+
+Después de 40 años programando videojuegos, vuelvo al punto de partida.  
+La diferencia es que ahora no tengo prisa.
 
 ---
 

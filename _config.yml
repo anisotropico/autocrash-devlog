@@ -2,7 +2,7 @@
 title: "Autocrash Devlog"
 description: "El remake de un juego de ZX Spectrum de 1990. 35 años después, cerrando el círculo."
 author: "Luis Angel Alda"
-url: "" # Tu URL de GitHub Pages: https://tuusuario.github.io
+url: "https://anisotropico.github.io" # Tu URL de GitHub Pages
 baseurl: "/autocrash-devlog" # Nombre del repositorio
 
 # Configuración del blog
