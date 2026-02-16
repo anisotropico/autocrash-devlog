@@ -2,17 +2,17 @@
 layout: post
 title: "El comienzo de todo"
 subtitle: "Por qué estoy haciendo esto y qué esperar de este devlog"
-date: 2026-02-01
+date: 2026-02-16
 tags: [meta, inicio]
 ---
 
-Hoy, 1 de febrero de 2026, comienza oficialmente el desarrollo de Autocrash.
+Hoy, 16 de febrero de 2026, comienza oficialmente el desarrollo de Autocrash.
 
-Después de 40 años programando —desde el ZX81 en binario hasta transformers y voxels—, después de años fragmentando mi creatividad en tickets, deadlines y roadmaps de consultoría, llega el momento de volver a crear por crear.
+Después de 40 años programando —desde el ZX81 en binario hasta Apple Vision Pro—, me jubilo, pero no puedo dejar de crear. Llega el momento de volver a crear por el placer de crear.
 
 ## ¿Por qué Autocrash?
 
-Autocrash fue uno de mis primeros juegos publicados. ZX Spectrum, 1990, publicado por Zigurat. Un juego de choques de coches, simple y directo. Lo programé en ensamblador Z80, cada byte contaba, cada sprite era un logro.
+Autocrash fue mi primer juego publicado. ZX Spectrum, 1990, publicado por Zigurat. Un juego de choques de coches, simple y directo. Lo programé en ensamblador Z80, cada byte contaba, cada sprite era un logro.
 
 35 años después, tiene sentido cerrar el círculo. Volver al origen, pero con todo lo aprendido en el camino.
 
