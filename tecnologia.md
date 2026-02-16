@@ -7,26 +7,47 @@ permalink: /tecnologia/
 
 ## Arquitectura del motor
 
-Autocrash se construye sobre un motor propio diseñado específicamente para simulación física de voxels con soporte multijugador determinista.
+![mixer](../assets/images/Mixer.png)
+
+El nuevo Autocrash no utilizará ningún motor comercial.
+
+Ni Unity, ni Unreal, ni frameworks generalistas.
+
+No es una cuestión ideológica. Es una cuestión de diseño.
+
+Si el proyecto quiere ser un laboratorio real, necesita libertad total. Control absoluto sobre cada decisión técnica. Capacidad de girar rápido cuando una idea lo exija, sin depender de capas externas.
+
+## Motor específico para un único propósito
+
+![mixer2](../assets/images/Mixer2.png)
+
+El motor será desarrollado exclusivamente para Autocrash.
+
+No busca ser genérico ni busca ser reutilizable. 
+
+Busca ser exacto, y permitir que las ideas se construyan sin rodeos innecesarios, sin capas de cebolla, con total libertad.
+
+Una base en C++, portable y desacoplada de cualquier sistema concreto. La lógica del juego estará claramente separada del backend gráfico. El interfaz de render se adaptará a cada entorno sin contaminar el núcleo.
+
+Empezaremos con DirectX por pura comodidad de desarrollo, pero manteniendo desde el inicio una arquitectura que permita sustituir la capa gráfica sin reescribir el corazón del sistema.
 
 ### Principios de diseño
 
-- **Herramientas antes que contenido**: Construir el pipeline completo antes de crear assets
-- **Determinismo absoluto**: Misma entrada = misma salida, siempre
-- **Aritmética de punto fijo**: Sin flotantes, sin sorpresas entre plataformas
-- **Destrucción a nivel de voxel**: Cada impacto modifica la geometría
+![voxel1](../assets/images/imageDetail.jpg)
 
-### Componentes principales
+![voxel2](../assets/images/imageSmoothDetail.jpg)
 
-#### Sistema de voxelización
-Conversión de modelos a representación volumétrica con LOD dinámico y optimización de memoria.
+La representación gráfica estará basada en voxels.
 
-#### Física determinista
-Motor de colisiones y respuesta física que garantiza sincronización perfecta entre clientes.
+La estética será deliberadamente retro, pero con tecnología contemporánea bajo el capó.
 
-#### Pipeline de renderizado
-Renderizado de voxels con soporte para destrucción en tiempo real.
+Los coches y personajes estarán voxelizados, preservando la identidad de bloque. Sin embargo, el motor incorporará un sistema propio de suavizado de aristas orientado a mejorar la percepción volumétrica.
+
+No se trata de borrar el voxel, se trata de refinarlo.
+
+La intención es mantener la esencia geométrica eliminando la dureza visual excesiva que suele asociarse al voxel clásico.
+
 
 ---
 
-*Documentación técnica detallada en desarrollo. Se irá expandiendo durante el proyecto.*
+

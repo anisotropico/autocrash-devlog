@@ -91,7 +91,7 @@ En aquel momento no lo veía así, pero estaba aprendiendo algo fundamental: ant
 Antes del ensamblador había papel.
 
 El código de MicroDraw y de Autocrash no empezó en un editor.  
-Empezó manuscrito, a bolígrafo, sobre papel cuadriculado, con tachones, flechas y grapas sujetando las hojas.
+Empezó manuscrito, a bolígrafo, sobre papel, con tachones, flechas y grapas sujetando las hojas.
 
 El tiempo frente al teclado era limitado. Los errores eran costosos. No había autocompletado, no había depurador avanzado, no había control de versiones.
 
