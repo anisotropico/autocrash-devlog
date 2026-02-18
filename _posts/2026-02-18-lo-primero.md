@@ -2,7 +2,7 @@
 layout: post
 title: "Orden en el laboratorio"
 subtitle: "Primero la estética voxel"
-date: 2026-02-16
+date: 2026-02-18
 tags: [meta, estética]
 ---
 
