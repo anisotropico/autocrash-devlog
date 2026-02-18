@@ -41,7 +41,7 @@ Está desarrollado en Windows MFC con DirectX. Es deliberadamente sencillo, enfo
 
 Nada más. Sin distracciones. (Si nos gusta iremos iterando)
 
-![VoxelEditor](/autocrash-devlog/assets/images/imagesPosts/VoxelEditor.png)
+![VoxelEditor](../assets/images/imagesPosts/VoxelEditor.png)
 
 ## Suavizado de aristas
 
@@ -64,7 +64,7 @@ La sensación de volumen mejora de forma notable y el sistema funciona a una vel
 
 Como vemos en la siguiente imagen, la geometría converge para evitar crecer poligonalmente.
 
-![VoxelChaflan](/autocrash-devlog/assets/images/imagesPosts/ConvergenciaChaflan.png)
+![VoxelChaflan](../assets/images/imagesPosts/ConvergenciaChaflan.png)
 
 ## Conclusión
 
