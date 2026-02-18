@@ -1,6 +1,6 @@
 # Autocrash Devlog - Configuración Jekyll
 title: "Autocrash Devlog"
-description: "El remake de un juego de ZX Spectrum de 1990. 35 años después, cerrando el círculo."
+description: "El remake de un juego de ZX Spectrum de 1990. 36 años después, cerrando el círculo."
 author: "Luis Angel Alda"
 url: "https://anisotropico.github.io" # Tu URL de GitHub Pages
 baseurl: "/autocrash-devlog" # Nombre del repositorio
@@ -14,6 +14,9 @@ paginate_path: "/pagina/:num/"
 plugins:
   - jekyll-paginate
   - jekyll-seo-tag
+
+#logo
+logo: "/assets/images/favicon.png" # Asegúrate de tener este archivo en tu proyecto
 
 # Redes sociales (ajusta según necesites)
 social:
