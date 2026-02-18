@@ -32,7 +32,7 @@ Es la herramienta.
 
 Llevo tiempo desarrollando un programa propio de creación y animación voxel.
 
-Como siempre, primero construimos la herramienta. Esto no da una sensación de libertad maravillosa. 0 dependencias.
+Como siempre, primero construimos la herramienta. Esto nos da una sensación de libertad maravillosa. 0 dependencias.
 
 Está desarrollado en Windows MFC con DirectX. Es deliberadamente sencillo, enfocado a dos funciones esenciales:
 
