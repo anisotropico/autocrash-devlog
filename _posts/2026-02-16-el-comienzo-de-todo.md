@@ -12,7 +12,7 @@ Después de 40 años programando —desde el ZX81 en binario hasta Apple Vision 
 
 ## ¿Por qué Autocrash?
 
-Autocrash fue mi primer juego publicado. ZX Spectrum, 1990, publicado por Zigurat. Un juego de choques de coches, simple y directo. Lo programé en ensamblador Z80, cada byte contaba, cada sprite era un logro.
+Autocrash fue mi primer juego publicado. ZX Spectrum, 1990, publicado por Zigurat. Un juego de coches de choque, simple y directo. Lo programé en ensamblador Z80, cada byte contaba, cada sprite era un logro.
 
 35 años después, tiene sentido cerrar el círculo. Volver al origen, pero con todo lo aprendido en el camino.
 
