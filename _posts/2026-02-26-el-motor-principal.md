@@ -10,7 +10,7 @@ Autocrash no empieza desde cero.
 
 Dispongo de un motor 3D propio que he utilizado en distintos proyectos anteriores, incluyendo desarrollos para PS4. Es un sistema pensado para exprimir rendimiento y ofrecer control total sobre el comportamiento del juego.
  
-Es una base madura de la que podemos partir y añadir el conjunto e la parte voxel.
+Es una base madura de la que podemos partir y a la que añadir el conjunto de la parte voxel.
 
 ## Arquitectura actual
 
