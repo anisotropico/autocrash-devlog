@@ -53,8 +53,8 @@ Y este proyecto es el momento perfecto para revisarlo.
 No se trata de reescribirlo todo.  
 Se trata de evolucionarlo.
 
-Revisar módulos existentes.
-Añadir el módulo Voxel.
+Revisar módulos existentes.  
+Añadir el módulo Voxel.  
 Simplificar donde sea posible.  
 Modernizar partes concretas.  
 Adaptarlo mejor al enfoque voxel del nuevo Autocrash.
