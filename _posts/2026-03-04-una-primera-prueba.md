@@ -2,7 +2,7 @@
 layout: post
 title: "Mi primera prueba real"
 subtitle: "Programar en un MiniPC con N95"
-date: 2026-03-24
+date: 2026-03-04
 tags: [meta, prueba1]
 ---
 
