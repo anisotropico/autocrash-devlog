@@ -91,11 +91,11 @@ Para cada par en colisión:
 - Se calcula el vector de separación.
 - Se desplazan ambos coches en direcciones opuestas.
 
-```html
+---
 <div class="video-container">
-  <iframe src="https://youtu.be/3nJ-k8Rw6ms?si=okO4U-tDHzx1ByQW" allowfullscreen></iframe>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/3nJ-k8Rw6ms" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
-```
+---
 
 ## Siguiente paso
 
