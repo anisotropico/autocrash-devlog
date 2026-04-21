@@ -73,7 +73,7 @@ Son efectos simples, pero importantes:
 - Permiten medir rendimiento.
 - Sirven como base para efectos más complejos.
 
-![ParicleCar]({{ "/assets/images/imagesPosts/SparkParticles.png" | relative_url }})
+![ParticleCar]({{ "/assets/images/imagesPosts/SparkParticles.png" | relative_url }})
 
 ## Siguiente paso
 
